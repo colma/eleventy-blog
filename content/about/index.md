@@ -3,6 +3,7 @@ layout: layouts/base.njk
 eleventyNavigation:
   key: About Me
   order: 3
+cta: "Get in touch!"
 ---
 # About Me
 

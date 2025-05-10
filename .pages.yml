@@ -25,7 +25,7 @@ content:
         fields:
           - { name: key, label: Key, type: string }
           - { name: order, label: Order, type: number }
-      - { name: cta, label: Call to Action, type: string }
+      - { name: cta, label: Call to Action, type: string, required: false }
       - { name: body, label: Body, type: rich-text }
   - name: metadata
     label: Metadata
