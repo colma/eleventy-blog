@@ -7,3 +7,5 @@ draft: false
 # Otsikko
 
 Tästä se lähtee.
+
+![](/public/img/bg-bl-pink.jpg)
