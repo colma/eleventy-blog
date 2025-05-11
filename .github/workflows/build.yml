@@ -39,8 +39,17 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: Install gh-pages
+        run: npm install gh-pages --save-dev
+
       - name: Build
         run: npx @11ty/eleventy
+
+      - name: Deploy
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          npx gh-pages -d _site --dotfiles
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
