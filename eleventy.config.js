@@ -78,6 +78,11 @@ module.exports = function(eleventyConfig) {
 		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
 	});
 
+	// Fix image paths by removing /public prefix
+	eleventyConfig.addFilter("fixImagePath", function(value) {
+		return value.replace('/public/img/', '/img/');
+	});
+
 	// Customize Markdown library settings:
 	eleventyConfig.amendLibrary("md", mdLib => {
 		mdLib.use(markdownItAnchor, {
