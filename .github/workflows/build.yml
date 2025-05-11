@@ -27,8 +27,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -37,20 +35,10 @@ jobs:
           cache: 'npm'
 
       - name: Install Dependencies
-        run: |
-          echo "Installing dependencies..."
-          npm ci
-          echo "Installed packages:"
-          npm list
-          echo "Current directory contents:"
-          ls -la
+        run: npm ci
 
       - name: Build
-        run: |
-          echo "Building site..."
-          npx @11ty/eleventy --verbose
-          echo "Build complete. Contents of _site:"
-          ls -la _site || echo "_site directory not found"
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
