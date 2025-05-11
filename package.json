@@ -13,7 +13,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/11ty/eleventy-base-blog.git"
+		"url": "git://github.com/colma/eleventy-blog.git"
 	},
 	"author": {
 		"name": "Zach Leatherman",

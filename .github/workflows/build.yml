@@ -36,26 +36,19 @@ jobs:
 
       - name: Install Dependencies
         run: |
+          echo "Installing dependencies..."
           npm ci
+          echo "Installed packages:"
           npm list
+          echo "Current directory contents:"
+          ls -la
 
       - name: Build
         run: |
           echo "Building site..."
-          npx @11ty/eleventy
+          npx @11ty/eleventy --verbose
           echo "Build complete. Contents of _site:"
-          ls -la _site
-
-      - name: Deploy
-        run: |
-          echo "Configuring git..."
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "actions@github.com"
-          
-          echo "Deploying to gh-pages..."
-          npx gh-pages -d _site --dotfiles --message "Deploy to GitHub Pages [skip ci]"
-          
-          echo "Deployment complete"
+          ls -la _site || echo "_site directory not found"
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
