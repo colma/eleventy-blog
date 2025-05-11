@@ -44,7 +44,7 @@ jobs:
           echo "Directory contents:"
           ls -la
           echo "Building site..."
-          npx @11ty/eleventy --verbose
+          DEBUG=* npx @11ty/eleventy
           echo "Build complete. Contents of _site:"
           ls -la _site || echo "_site directory not found"
 
