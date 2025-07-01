@@ -9,4 +9,4 @@ cta: Just do it
 
 I am a person that writes stuff and things. And I love it!
 
-## Just do it!
+## Just do this and that.
