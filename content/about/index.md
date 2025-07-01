@@ -1,5 +1,5 @@
 ---
-layout: layouts/about.njk
+layout: layouts/base.njk
 eleventyNavigation:
   key: About Me
   order: 3
@@ -9,4 +9,4 @@ cta: Just do it
 
 I am a person that writes stuff and things. And I love it!
 
-## Mitä mitä!
+## Just do it!
